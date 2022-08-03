@@ -1,12 +1,17 @@
+
+const argv = process.argv.slice(2);
+const argc = argv.length;
+
+const if_undef = (i, d) => i == undefined ? d : parseInt(i);
+let months = if_undef(argv[0], 12);
+let investment_per_month = if_undef(argv[1], 50);
+let principle = if_undef(argv[2], 0)
+let rate_by_year = if_undef(argv[3], 1.12);
+
+
 const dollars = (d) => d.toFixed(2);
 
-let rate_by_year = 1.12;
-let r = Math.pow(1.12, 1 / 12); // rate by month
-
-let months = 12;
-
-let investment_per_month = 50;
-let principle = 0;
+let r = Math.pow(rate_by_year, 1 / 12); // rate by month
 
 // let money_final = principle;
 // for (let t = 0; t < months; t++) {

@@ -2,7 +2,7 @@ const argv = process.argv.slice(2);
 const argc = argv.length;
 
 const if_undef = (i, d) => (i == undefined ? d : parseInt(i));
-let months = if_undef(argv[0], 120);
+let months = if_undef(argv[0], 12);
 let investment_per_month = if_undef(argv[1], 50);
 let principle = if_undef(argv[2], 0);
 let rate_by_year = if_undef(argv[3], 1.12);
